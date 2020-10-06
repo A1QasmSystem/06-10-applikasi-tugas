@@ -5,8 +5,8 @@ import Register from "./src/components/register";
 import Splash from "./src/components/splash";
 export default class App extends Component {
   render() {
-    // return <Splash />;
+    return <Splash />;
     // return <Login />;
-    return <Register />;
+//     return <Register />;
   }
 }
