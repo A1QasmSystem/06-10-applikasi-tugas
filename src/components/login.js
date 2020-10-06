@@ -1,5 +1,5 @@
 // memasukan component atau menghubungkan ke React
-import React from "react";
+import React from 'react';
 import {
   View,
   Text,
@@ -7,24 +7,22 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
-} from "react-native";
+} from 'react-native';
 
 class Login extends React.Component {
   render() {
     return (
       <View
         style={{
-          backgroundColor: "#87cefa",
+          backgroundColor: '#87cefa',
           flex: 1,
-        }}
-      >
+        }}>
         <TouchableOpacity
           onPress={() => {
-            alert("Ganti bahasa");
-          }}
-        >
+            alert('Ganti bahasa');
+          }}>
           <Text style={styles.language}>
-            {" "}
+            {' '}
             Language: English (United States) v
           </Text>
         </TouchableOpacity>
@@ -42,22 +40,15 @@ class Login extends React.Component {
           secureTextEntry={true}
         />
         <View style={styles.login}>
-          <Button title="Log in" onPress={() => alert("Password salah")} />
+          <Button title="Log in" onPress={() => alert('Password salah')} />
         </View>
         {/* <Switch /> */}
         <View style={styles.forgot}>
+          <Text style={styles.forgot}> Forgot your login details?</Text>
           <TouchableOpacity
             onPress={() => {
-              alert("Ganti bahasa");
-            }}
-          >
-            <Text style={styles.forgot}> Forgot your login details?</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => {
-              alert("What do you Help");
-            }}
-          >
+              alert('What do you Help');
+            }}>
             <Text style={styles.help}> Get help signing in.</Text>
           </TouchableOpacity>
         </View>
@@ -65,18 +56,16 @@ class Login extends React.Component {
         {/* <ActivityIndicator size="small" color="#0000ff" /> */}
         <TouchableOpacity
           onPress={() => {
-            alert("Masukan Account Facebook");
-          }}
-        >
+            alert('Masukan Account Facebook');
+          }}>
           <Text style={styles.fblogin}> Log in with Facebook</Text>
         </TouchableOpacity>
         <View style={styles.dont}>
           <Text style={styles.dont}> Don't have an account?</Text>
           <TouchableOpacity
             onPress={() => {
-              alert("Create Account");
-            }}
-          >
+              alert('Create Account');
+            }}>
             <Text style={styles.dont}> Sign up.</Text>
           </TouchableOpacity>
         </View>
@@ -89,8 +78,8 @@ const styles = StyleSheet.create({
     margin: 10,
     marginHorizontal: 30,
     marginTop: 1,
-    backgroundColor: "#f1f3f8",
-    borderBottomColor: "#000000",
+    backgroundColor: '#f1f3f8',
+    borderBottomColor: '#000000',
     borderBottomWidth: 1,
     padding: 5,
     opacity: 0.5,
@@ -98,24 +87,24 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor: "#eaeaea",
-    alignItems: "center",
+    backgroundColor: '#eaeaea',
+    alignItems: 'center',
   },
   language: {
     marginBottom: 30,
     marginTop: 15,
-    color: "#20232a",
-    textAlign: "center",
+    color: '#20232a',
+    textAlign: 'center',
     fontSize: 15,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   insta: {
     marginBottom: 30,
     marginTop: 10,
-    color: "#20232a",
-    textAlign: "center",
+    color: '#20232a',
+    textAlign: 'center',
     fontSize: 30,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   login: {
     width: 300,
@@ -126,7 +115,7 @@ const styles = StyleSheet.create({
     // marginHorizontal: 30,
     marginTop: 1,
     // backgroundColor: '#f1f3f8',
-    borderBottomColor: "#000000",
+    borderBottomColor: '#000000',
     // borderBottomWidth: 1,
     padding: 5,
     // opacity: 0.5,
@@ -134,32 +123,32 @@ const styles = StyleSheet.create({
   forgot: {
     // marginBottom: 30,
     marginTop: 5,
-    color: "#20232a",
-    textAlign: "center",
+    color: '#20232a',
+    textAlign: 'center',
     fontSize: 14,
     // fontWeight: 'bold',
-    flexDirection: "row",
-    alignSelf: "center",
+    flexDirection: 'row',
+    alignSelf: 'center',
   },
   help: {
     // marginBottom: 30,
     marginTop: 5,
-    color: "#20232a",
-    textAlign: "center",
+    color: '#20232a',
+    textAlign: 'center',
     fontSize: 14,
-    fontWeight: "bold",
-    flexDirection: "row",
-    alignSelf: "center",
+    fontWeight: 'bold',
+    flexDirection: 'row',
+    alignSelf: 'center',
   },
   or: {
     // marginBottom: 30,
     marginTop: 20,
-    color: "#20232a",
-    textAlign: "center",
+    color: '#20232a',
+    textAlign: 'center',
     fontSize: 17,
-    fontWeight: "bold",
-    flexDirection: "row",
-    alignSelf: "center",
+    fontWeight: 'bold',
+    flexDirection: 'row',
+    alignSelf: 'center',
   },
   fblogin: {
     // shadowRadius: 5,
@@ -170,19 +159,19 @@ const styles = StyleSheet.create({
     // borderColor: '#20232a',
     // borderRadius: 20,
     // backgroundColor: '#61dafb',
-    color: "#20232a",
-    textAlign: "center",
+    color: '#20232a',
+    textAlign: 'center',
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   dont: {
     marginTop: 60,
-    color: "#20232a",
-    textAlign: "center",
+    color: '#20232a',
+    textAlign: 'center',
     fontSize: 14,
     // fontWeight: 'bold',
-    flexDirection: "row",
-    alignSelf: "center",
+    flexDirection: 'row',
+    alignSelf: 'center',
   },
 });
 
