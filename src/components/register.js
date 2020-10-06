@@ -65,7 +65,7 @@ class Register extends React.Component {
         <View style={styles.login}>
           <Button
             title="Sign up"
-            onPress={() => alert("Right button pressed")}
+            onPress={() => alert("Succes Register")}
           />
         </View>
         {/* <Switch /> */}
@@ -74,7 +74,7 @@ class Register extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              alert("Ganti bahasa");
+              alert("terms and conditions");
             }}
           >
             <Text style={styles.terms}> Terms and Privacy Policy.</Text>
@@ -84,7 +84,7 @@ class Register extends React.Component {
           <Text style={styles.have}> Have an account?</Text>
           <TouchableOpacity
             onPress={() => {
-              alert("What do you help");
+              alert("Sign in");
             }}
           >
             <Text style={styles.logins}> Log in</Text>
