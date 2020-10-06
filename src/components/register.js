@@ -1,5 +1,5 @@
 // memasukan component atau menghubungkan ke React
-import React from 'react';
+import React from "react";
 import {
   View,
   Text,
@@ -12,40 +12,33 @@ import {
   ActivityIndicator,
   Picker,
   TouchableOpacity,
-} from 'react-native';
+} from "react-native";
 
 class Register extends React.Component {
   render() {
     return (
       <View
         style={{
-          backgroundColor: '#rgb(238, 130, 238)',
+          backgroundColor: "white",
           flex: 1,
-        }}>
-        {/* <TouchableOpacity
-          onPress={() => {
-            alert('Ganti bahasa');
-          }}>
-          <Text style={styles.language}>
-            {' '}
-            Language: English (United States) v
-          </Text>
-        </TouchableOpacity> */}
+        }}
+      >
         <Text style={styles.insta}> Instagram</Text>
         <Text style={styles.signuptosee}>
-          {' '}
+          {" "}
           Sign up to see photos and videos from your friends
         </Text>
-        <View style={styles.loginstyle}>
-          <Image style={styles.Image} source={require('./assets/fb.jpg')} />
-          <Text style={styles.loginstyle}> Log in with Facebook</Text>
-        </View>
+        <TouchableOpacity
+          onPress={() => {
+            alert("Login from Facebook");
+          }}
+        >
+          <View style={styles.loginstyle}>
+            <Image style={styles.Image} source={require("./assets/fb.jpg")} />
+            <Text style={{ color: "white" }}> Log in with Facebook</Text>
+          </View>
+        </TouchableOpacity>
         <Text style={styles.or}> OR</Text>
-
-        {/* <Image
-          style={styles.tinyLogo}
-          source={require('./src/components/assets/banner.png')}
-        /> */}
         <TextInput
           placeholder="Email"
           style={styles.TextInput2}
@@ -72,22 +65,29 @@ class Register extends React.Component {
         <View style={styles.login}>
           <Button
             title="Sign up"
-            onPress={() => alert('Right button pressed')}
+            onPress={() => alert("Right button pressed")}
           />
         </View>
         {/* <Switch /> */}
-        <View style={styles.forgot}>
+        <View style={styles.by}>
+          <Text style={styles.by}> By signing up, you agree to our</Text>
+
           <TouchableOpacity
             onPress={() => {
-              alert('Ganti bahasa');
-            }}>
-            <Text style={styles.forgot}> Forgot your login details?</Text>
+              alert("Ganti bahasa");
+            }}
+          >
+            <Text style={styles.terms}> Terms and Privacy Policy.</Text>
           </TouchableOpacity>
+        </View>
+        <View style={styles.have}>
+          <Text style={styles.have}> Have an account?</Text>
           <TouchableOpacity
             onPress={() => {
-              alert('Ganti bahasa');
-            }}>
-            <Text style={styles.help}> Get help signing in.</Text>
+              alert("What do you help");
+            }}
+          >
+            <Text style={styles.logins}> Log in</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -99,8 +99,8 @@ const styles = StyleSheet.create({
     margin: 10,
     marginHorizontal: 30,
     marginTop: 1,
-    backgroundColor: '#f1f3f8',
-    borderBottomColor: '#000000',
+    backgroundColor: "#f1f3f8",
+    borderBottomColor: "#000000",
     borderBottomWidth: 1,
     padding: 5,
     opacity: 0.5,
@@ -108,105 +108,122 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor: '#eaeaea',
-    alignItems: 'center',
-  },
-  language: {
-    marginBottom: 30,
-    marginTop: 15,
-    color: '#20232a',
-    textAlign: 'center',
-    fontSize: 15,
-    fontWeight: 'bold',
+    backgroundColor: "#eaeaea",
+    alignItems: "center",
   },
   insta: {
-    marginBottom: 30,
+    marginBottom: 15,
     marginTop: 20,
-    color: '#20232a',
-    textAlign: 'center',
+    color: "#20232a",
+    textAlign: "center",
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   signuptosee: {
-    marginBottom: 30,
-    marginRight: 30,
-    marginLeft: 30,
-    marginTop: 10,
-    color: '#20232a',
-    textAlign: 'center',
-    fontSize: 20,
-    textAlign: 'center',
+    marginBottom: 15,
+    marginRight: 40,
+    marginLeft: 40,
+    // marginTop: 0,
+    color: "#20232a",
+    textAlign: "center",
+    fontSize: 17,
+    textAlign: "center",
   },
   login: {
     width: 300,
     height: 40,
     marginHorizontal: 30,
-    opacity: 0.3,
+    // opacity: 0.3,
 
     marginTop: 1,
-    borderBottomColor: '#000000',
+    borderBottomColor: "#000000",
     padding: 5,
   },
 
   loginstyle: {
     width: 300,
     height: 35,
-    backgroundColor: 'dodgerblue',
-    alignSelf: 'center',
+    backgroundColor: "dodgerblue",
+    alignSelf: "center",
     borderRadius: 5,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginTop: 5,
-    color: '#20232a',
-    textAlign: 'center',
+    color: "#20232a",
+    textAlign: "center",
     fontSize: 14,
-    flexDirection: 'row',
-    alignSelf: 'center',
+    justifyContent: "center",
+    // flexDirection: "row",
+    // alignSelf: "center",
   },
   Image: {
     width: 30,
     height: 50,
+    tintColor: "white",
   },
-  forgot: {
-    marginTop: 5,
-    color: '#20232a',
-    textAlign: 'center',
+  by: {
+    // margin: 10,
+    marginTop: 10,
+    // marginBottom: 50,
+    color: "#20232a",
+    textAlign: "center",
     fontSize: 14,
-    flexDirection: 'row',
-    alignSelf: 'center',
+    // flexDirection: "row",
+    alignSelf: "center",
   },
-  help: {
-    marginTop: 5,
-    color: '#20232a',
-    textAlign: 'center',
+  terms: {
+    // marginTop: 5,
+    color: "#20232a",
+    textAlign: "center",
     fontSize: 14,
-    fontWeight: 'bold',
-    flexDirection: 'row',
-    alignSelf: 'center',
+    fontWeight: "bold",
+    flexDirection: "row",
+    alignSelf: "center",
   },
   or: {
-    marginTop: 20,
-    color: '#20232a',
-    textAlign: 'center',
+    marginTop: 10,
+    marginBottom: 10,
+    color: "#20232a",
+    textAlign: "center",
     fontSize: 17,
-    fontWeight: 'bold',
-    flexDirection: 'row',
-    alignSelf: 'center',
+    fontWeight: "bold",
+    flexDirection: "row",
+    alignSelf: "center",
   },
   fblogin: {
     marginTop: 20,
-    color: '#20232a',
-    textAlign: 'center',
+    color: "#20232a",
+    textAlign: "center",
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   dont: {
     marginTop: 60,
-    color: '#20232a',
-    textAlign: 'center',
+    color: "#20232a",
+    textAlign: "center",
     fontSize: 14,
-    flexDirection: 'row',
-    alignSelf: 'center',
+    flexDirection: "row",
+    alignSelf: "center",
+  },
+  have: {
+    // marginBottom: 30,
+    marginTop: 30,
+    color: "#20232a",
+    textAlign: "center",
+    fontSize: 14,
+    // fontWeight: 'bold',
+    flexDirection: "row",
+    alignSelf: "center",
+  },
+  logins: {
+    // marginBottom: 30,
+    marginTop: 30,
+    color: "#20232a",
+    textAlign: "center",
+    fontSize: 14,
+    fontWeight: "bold",
+    flexDirection: "row",
+    alignSelf: "center",
   },
 });
 
